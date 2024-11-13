@@ -1,0 +1,3 @@
+- use venv to create a virtual environment
+- install django
+- create a new app for pages
