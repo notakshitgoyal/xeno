@@ -23,5 +23,6 @@
         <a href="{% url 'leads_list' %}" class="inline-block py-4 px-8 bg-blue-500 text-white rounded-xl">Back to Leads</a>
         <hr>
         <a href="{% url 'leads_delete' lead.id %}" class="inline-block py-4 px-8 bg-red-500 text-white rounded-xl">Delete</a>
+        <a href="{% url 'leads_edit' lead.id %}" class="inline-block py-4 px-8 bg-teal-500 text-white rounded-xl">Edit</a>
     </div>
 {% endblock %}
