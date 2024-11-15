@@ -12,7 +12,7 @@
     <div class="space-x-4">
         <a href="{% url 'about' %}" class="text-white">About</a>
         <a href="text-white" class="py-4 px-6 rounded-xl bg-teal-600">Login</a>
-        <a href="text-white" class="py-4 px-6 rounded-xl bg-teal-300">Register</a>
+        <a href="{% url 'signup' %}" class="py-4 px-6 rounded-xl bg-teal-300">Register</a>
     </div>
   </nav>
   {% block content %}
