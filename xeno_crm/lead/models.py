@@ -24,6 +24,7 @@ class Lead(models.Model):
     priority = models.CharField(max_length=10, choices=CHOICES_PRIORITY,default=MEDIUM)
     
     created_by = models.ForeignKey(User, related_name='leads', on_delete=models.CASCADE)
+    # created_by = models.ForeignKey(User, on_delete=models.CASCADE)
     created_at = models.DateTimeField(auto_now_add=True)
     modified_at = models.DateTimeField(auto_now=True)
     name = models.CharField(max_length=255)
