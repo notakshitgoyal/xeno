@@ -30,7 +30,6 @@ ALLOWED_HOSTS = []
 LOGIN_REDIRECT_URL = '/dashboard/'
 LOGIN_URL = '/log-in/'
 LOGOUT_REDIRECT_URL = 'index'
-LOGOUT_USING_GET = True
 
 INSTALLED_APPS = [
     'django.contrib.admin',

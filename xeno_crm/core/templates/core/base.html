@@ -11,13 +11,24 @@
     <a href = "/" class="text-white">XENO CRM</a>
     <div class="space-x-4">
         <a href="{% url 'about' %}" class="text-white">About</a>
-        {% if request.user.is_authenticated %}
+        <!-- {% if request.user.is_authenticated %}
           <a href="{% url 'dashboard' %}" class="py-4 px-6 rounded-xl bg-teal-600">Dashboard</a>
           <a href="{% url 'add_lead' %}" class="py-4 px-6 rounded-xl bg-teal-600">Add Leads</a>
           <a href="{% url 'logout' %}" class="py-4 px-6 rounded-xl bg-red-300">Logout</a>
         {% else %}
           <a href="{% url 'login' %}" class="py-4 px-6 rounded-xl bg-teal-600">Login</a>
           <a href="{% url 'signup' %}" class="py-4 px-6 rounded-xl bg-teal-300">Register</a>
+        {% endif %} -->
+        {% if request.user.is_authenticated %}
+          <a href="{% url 'dashboard' %}" class="py-4 px-6 rounded-xl bg-teal-600">Dashboard</a>
+          <a href="{% url 'add_lead' %}" class="py-4 px-6 rounded-xl bg-teal-600">Add Leads</a>
+          <form method="post" action="{% url 'logout' %}" class="inline">
+              {% csrf_token %}
+              <button type="submit" class="py-4 px-6 rounded-xl bg-red-300">Logout</button>
+          </form>
+        {% else %}
+                <a href="{% url 'login' %}" class="py-4 px-6 rounded-xl bg-teal-600">Login</a>
+                <a href="{% url 'signup' %}" class="py-4 px-6 rounded-xl bg-teal-300">Register</a>
         {% endif %}
     </div>
   </nav>
